@@ -1,6 +1,10 @@
 clear all;clc;
 
 xm=0;
+onek='@(x)';
+fonks=input("Fonksiyonu girin:",'s');
+fonksiyon=strcat(onek,fonks);
+f=str2func(fonksiyon);
 xl = input("xl degeri:");
 xr = input("xr degeri:");
 km = 0;
@@ -48,12 +52,5 @@ elseif (km == 0)
 else
     fprintf("Maks deneme sayisinda istenilen kok bulunamadi\n");
     fprintf("Hesaplanan son kok degeri:%.4f\n", xm);
-end
-
-
-
-function fx = f(x)
-    fx = (x^3) - 3.7*(x^2) + 6.25*x - 4.69;
-
 end
 
